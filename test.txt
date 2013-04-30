@@ -1,6 +1,0 @@
-blah blah
-testing testing
-
-
-scp /Users/Emily\ 1/Desktop/test.txt eseitz@athena.dialup.mit.edu:/mit/mitccc/www
-scp /Users/Lauren/Desktop/MITCCC_Constitution.pdf lauburke@athena.dialup.mit.edu:/mit/mitccc/www
