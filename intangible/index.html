@@ -1,0 +1,50 @@
+<!doctype html>
+ 
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <title>Teaching the Intangible</title>
+    <link rel="stylesheet" href="jquery-ui-1.10.2.custom/css/hot-sneaks/jquery-ui-1.10.2.custom.css" />
+  	<script src="jquery-ui-1.10.2.custom/js/jquery-1.9.1.js"></script>
+  	<script src="jquery-ui-1.10.2.custom/js/jquery-ui-1.10.2.custom.js"></script>
+  	<script src="jquery.ui.touch-punch.min.js"></script>
+  	<link rel="stylesheet" href="css/intangible.css"/>
+    <script src="raphael.js"></script>
+    <script src="intangible.js"></script>
+    <style>
+    #svgContainer {
+    	width:1000px;
+        height:500px;
+        background-color:#EEEEEE;
+    }
+    
+    </style>
+    <script>
+    window.onload = function() {
+    	display();
+    }
+    $(function() {
+    	$("#check")
+    		.button()
+    		.click(function() {
+    			check();
+    		});
+    	$("#mode")
+    		.button()
+			.click(function() {
+				changeMode();
+			});
+		$("#result")
+			.button();
+	});
+    </script>
+</head>
+
+<body>
+	<div id="canvas">
+		<button id="mode" style="left: 15px; position: absolute;" class="mode">Mode</button>
+		<button id="check" style="left: 120px; position: absolute;" class="check grey">Check</button>
+		<button id="result" style="left: 225px; position: absolute;" class="result grey"></button>
+	</div>
+</body>
+</html>
