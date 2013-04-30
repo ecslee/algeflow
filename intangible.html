@@ -1,0 +1,70 @@
+<!doctype html>
+<html>
+    <head>
+        <meta charset="utf-8">
+            <meta http-equiv="X-UA-Compatible" content="chrome=1">
+                <title>Intangible</title>
+                
+                <link rel="stylesheet" href="stylesheets/styles.css">
+                    <link rel="stylesheet" href="stylesheets/pygment_trac.css">
+                        <script src="javascripts/scale.fix.js"></script>
+                        <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+                            <!--[if lt IE 9]>
+                             <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+                             <![endif]-->
+                            </head>
+    <body>
+        <div class="wrapper">
+            <header>
+                <h1 class="header">edtech</h1>
+                <p class="header"></p>
+                
+                <ul>
+                    <li><a class="buttons github" href="https://github.com/ecseitz/edtech">View On GitHub</a></li>
+                    <li><a class="buttons github" href="https://dl.dropboxusercontent.com/u/8520427/intangible/index.html" target="_blank">Intangible</a></li>
+                    <li><a class="buttons github" href="https://dl.dropboxusercontent.com/u/8520427/ALGEflow/index.html" target="_blank">ALGEflow</a></li>
+                </ul>
+                
+                <p class="header">This project is maintained by <a class="header name" href="https://github.com/ecseitz">ecseitz</a></p>
+                
+                
+            </header>
+            <section>
+                
+                <h3>Intangible</h3>
+                
+                <p>The Intangible project is the <a href="https://dl.dropboxusercontent.com/u/8520427/intangible/index.html" target="_blank">virtual version</a> of a physical tool that I created.  It demonstrates the finished product that this tool would become.  Below, I will describe the original physical tool, but the virtual version works the same way.</p>
+                
+                
+                <h3>Inspiration</h3>
+                
+                <p>The Intangible project started out as a physical tool to help students learn chemistry.  I was inspired by the classic activity of drawing <a href="http://en.wikipedia.org/wiki/Lewis_structure">Lewis dot diagrams</a> to study how electrons are arranged when atoms bond to form molecules.  I had to draw these diagrams in high school chemistry, as do many other students.  I wanted to design a tool that would make this highly conceptual activity more tangible - hence the name "Intangible."</p>
+                
+                <p>Beyond electron configurations, molecules also have specific bond angles.  I used flex sensors to mark where the bonds between molecules occur, and these sensors can read approximately the angle at which they are bent.  Students using the tool can therefore configure the electron LEDs and then bend the bonds to the correct angle in order to model a specific molecule.
+
+                    
+                <h3>Physical design</h3>
+                    
+                <p>I designed round "atoms" that included LEDs in the place of electrons.  Each atom has a battery and the central atom has a <a href="http://lilypadarduino.org/" target="_blank">LilyPad Arduino</a> running the tool's code.  In the following example, the blue central atom is Oxygen, and each of the red atoms are Hydrogen.  This is the water molecule.</p>
+                
+                <img src="http://25.media.tumblr.com/2883615dfa0ee9e06db5a4cbe1055b45/tumblr_mil18vY75N1s2i29do4_r1_500.jpg" alt="atom picture" width="450">
+                <img src="http://upload.wikimedia.org/wikipedia/commons/thumb/f/fa/Water-2D-flat.png/770px-Water-2D-flat.png" alt="water molecule diagram" width="150">
+                    
+                <p>The user turns on the lights and bends the arms, and if they are correct an LED in the central atom blinks.  For water, there should be six LEDs on for Oxygen and one for each Hydrogen.  The angle between the bonds is ~105°.  It looks like the diagram above.</p>
+
+                    
+                <h3>Binary math</h3>
+                    
+                <p>After designing this tool for a class, the professor challenged me to come up with an alternate application.  The on/off nature of the LEDs reminded me of the 0/1 of binary numbers, and so I recoded the tool to help students practice binary math.</p>
+                    
+                <p>For math, I designated each light to represent a different power of 2, and the arrangement follows a couterclockwise circle.  These powers of 2 are clearly marked in the virtual version.  The user turns on various lights for the two smaller atoms, performs some mathematical function on those two numbers, and then lights up the central atom with the result.  There are multiple modes, including multiplication and addition.  When the user then bends the bonds, it is a signal for the LilyPad to check the result.  If the math is correct, then it flashes an LED.</p>
+                    
+            </section>
+            <footer>
+                <p><small>Hosted on <a href="https://pages.github.com">GitHub Pages</a> using the Dinky theme</small></p>
+            </footer>
+        </div>
+        <!--[if !IE]><script>fixScale(document);</script><![endif]-->
+		
+    </body>
+</html>
