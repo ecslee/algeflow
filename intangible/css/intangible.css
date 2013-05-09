@@ -177,3 +177,15 @@
 	border-right-color:#CCCC00;
 	border-top-color:#CCCC00;
 }
+
+.line {
+	position:absolute; /* doesn't have to be absolute */
+	z-index: -1;         /* places the line behind other elements */
+}
+ 
+.line div {
+    position:absolute;
+    left: 0px; top: 0px;
+    border-left-color: transparent;
+    border-style: solid;
+}
