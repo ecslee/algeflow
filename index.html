@@ -1,53 +1,66 @@
 <!doctype html>
 <html>
-  <head>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="chrome=1">
-    <title>edtech by ecseitz</title>
+    <head>
+        <meta charset="utf-8">
+            <meta http-equiv="X-UA-Compatible" content="chrome=1">
+                <title>ALGEflow</title>
+                
+                <link rel="stylesheet" href="stylesheets/styles.css">
+                    <link rel="stylesheet" href="stylesheets/pygment_trac.css">
+                        <script src="javascripts/scale.fix.js"></script>
+                        <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+                            <!--[if lt IE 9]>
+                             <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+                             <![endif]-->
+                            </head>
+    <body>
+        <div class="wrapper">
+            <header>
+                <a href="index.html"><h1 class="header">edtech</h1></a>
+                <p class="header"></p>
+                
+                <ul>
+                    <li><a class="buttons github" href="algeflow.html">ALGEflow</a></li>
+                    <li><a class="buttons github" href="https://github.com/ecseitz/edtech">View On GitHub</a></li>
+                </ul>
+                
+                <p class="header">This project is maintained by <a class="header name" href="https://github.com/ecseitz">ecseitz</a></p>
+                
+                
+            </header>
+            <section>
+                
+                <h3>ALGEflow</h3>
+                
+                <p>ALGEflow is a tool I designed for algebra students to practice recognizing the steps required to solve an equation.  It is also useful for younger students who are learning about the order of operations in math.  This tool makes students actively think about which steps follow each other, and it shows them that each step flows into the next because they are all connected - hence the name <em>ALGEflow</em>.  The tool also requires students to show their work in order to complete a problem.  ALGEflow can be found online <a href="https://dl.dropboxusercontent.com/u/8520427/ALGEflow/index.html" target="_blank">here</a>, but it is still being refined (press the Next button to start).  <a href="algeflow_how_to.html">Click here</a> for specific instructions on using the tool.</p>
+                
+                
+                <h3>Inspiration</h3>
+                
+                <p>As a student teacher, I was in charge of a remedial algebra class.  The students often had trouble figuring out which steps to take in solving an algebraic equation.  They frequently forgot to perform certain functions on both sides of the equations.  The students also despised showing their work, and so it was sometimes difficult to pinpoint where a problem went wrong.  I wanted to create a piece of technology that would have helped me in that classroom by getting students used to the idea of showing all of their work and understanding that all of the steps they take are connected.</p>
 
-    <link rel="stylesheet" href="stylesheets/styles.css">
-    <link rel="stylesheet" href="stylesheets/pygment_trac.css">
-    <script src="javascripts/scale.fix.js"></script>
-    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
-    <!--[if lt IE 9]>
-    <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
-    <![endif]-->
-  </head>
-  <body>
-    <div class="wrapper">
-      <header>
-          <a href="index.html"><h1 class="header">edtech</h1></a>
-          <p class="header"></p>
-          
-          <ul>
-              <li><a class="buttons github" href="https://github.com/ecseitz/edtech">View On GitHub</a></li>
-              <li><a class="buttons github" href="intangible.html">Intangible</a></li>
-              <li><a class="buttons github" href="algeflow.html">ALGEflow</a></li>
-          </ul>
+                    
+                <h3>Design</h3>
+                    
+                <p>Each problem in ALGEflow has a set of blocks, an equation, and a canvas area in which to work.  The user drags blocks onto the canvas and places them in the correct order for solving the equation.  I simply repurposed jQuery UI draggable objects to create the blocks.</p>
+                
+                <img src="images/algeflow.png" alt="algeflow example" width="500">
+                    
+                <p>Problems can have exactly the right blocks so that the user must use all of them to complete the problem.  Or a problem can have too many blocks so that the user must pick and choose which ones are correct.</p>
 
-        <p class="header">This project is maintained by <a class="header name" href="https://github.com/ecseitz">ecseitz</a></p>
-
-
-      </header>
-      <section>
-<h3>Educational technology projects</h3>
-
-<p>This repository contains code for some of the educational tools that I have designed for classes during my Master's program.</p>
-
-<h3>Intangible</h3>
-
-<p><a href="intangible.html">This project</a> started out as a physical tool for learning chemistry, and it has been repurposed for learning binary math as well.</p>
-
-<h3>ALGEflow</h3>
-
-<p><a href="algeflow.html">This project</a> is an online tool that helps math students learn about the steps involved in solving algebraic equations, and it is also applicable for students learning order of operations.</p>
-
-      </section>
-      <footer>
-        <p><small>Hosted on <a href="http://pages.github.com">GitHub Pages</a> using the Dinky theme</small></p>
-      </footer>
-    </div>
-    <!--[if !IE]><script>fixScale(document);</script><![endif]-->
+                    
+                <h3>Future functionality</h3>
+                    
+                <p>The first feature that I want to add is simply a box in which the user will type the result.  In order to get a problem correct, the user must have the right result and the right order of blocks.  This will be simple to add.</p>
+                    
+                <p>The second feature that I want to add will be a little more complex.  I would like the equation to change dynamically as each block is placed onto the canvas.  In the example above, for instance, after the user places the "2x3" block, the equation would change to say "1+6+2."  This feature will make it a little easier for the user because they will not have to keep track of the changes in their head or on paper.  It is also a little bit tricky because if a user chooses an incorrect block or the wrong order, the equation will still change accurately but show numbers that ultimately are incorrect.</p>
+                    
+            </section>
+            <footer>
+                <p><small>Hosted on <a href="http://pages.github.com">GitHub Pages</a> using the Dinky theme</small></p>
+            </footer>
+        </div>
+        <!--[if !IE]><script>fixScale(document);</script><![endif]-->
 		
-  </body>
+    </body>
 </html>
