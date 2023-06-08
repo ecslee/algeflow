@@ -1,0 +1,75 @@
+<!doctype html>
+ 
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <title>ALGEflow</title>
+    <link rel="stylesheet" href="jquery-ui-1.10.2.custom/css/le-frog/jquery-ui-1.10.2.custom.css" />
+    <script src="jquery-ui-1.10.2.custom/js/jquery-1.9.1.js"></script>
+    <script src="jquery-ui-1.10.2.custom/js/jquery-ui-1.10.2.custom.js"></script>
+    <script src="ageflow.js"></script>
+    <style>
+    #blocks, #canvas { list-style-type: none; margin: 0; padding: 0 0 2.5em; float: left; margin-right: 10px; }
+    #blocks li, #canvas li { margin: 0 5px 5px 5px; padding: 5px; font-size: 1.2em; width: 200px; }
+    .ui-state-highlight { height: 1.5em; line-height: 1.2em; }
+    
+    </style>
+    <script>
+    $(function() {
+        $("#blocks, #canvas").sortable({
+            connectWith: ".connectedSortable"
+        }).disableSelection();
+        $("#blocks").sortable({
+            placeholder: "ui-state-highlight"
+        });
+        $("#canvas").sortable({
+            placeholder: "ui-state-highlight"
+        });
+        $("#submit").click(function() {
+			checkOrder($("#canvas").sortable("toArray").join());
+		});
+		$("#next").click(function() {
+			displayProblem();
+		});
+    });
+    </script>
+</head>
+
+<body>
+	<table>
+	<tr>
+		<td></td>
+		<td>
+			<label id="equation"></label>
+		</td>
+		<td></td>
+	</tr>
+	<tr>
+		<td>
+		<ul id="blocks" class="connectedSortable" style="width:222px; padding: 10px 5px; border:3px solid #C71585">
+		</ul>
+		</td>
+		<td>
+		<ul id="canvas" class="connectedSortable" style="width:222px; padding: 10px 5px; border:3px solid #C71585;">
+		</ul>
+		</td>
+	</tr>
+	<tr>
+		<td></td>
+		<td>
+			<label id="result" style="float:left"></label>
+		</td>
+		<td></td>
+	</tr>
+	<tr>
+		<td></td>
+		<td><table><tr>
+			<td><button id="submit">Submit</button></td>
+			<td><button id="next">Next</button></td>
+ 		</tr></table></td>
+ 		<td></td>
+ 	</tr>
+	</table>
+ 
+</body>
+</html>
